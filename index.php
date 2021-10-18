@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 include "library/tmn_gif.class.php";
 error_reporting(0);
 ini_set('display_errors', 0);
-$phone = "0910504092";
+$phone = "0800000000";//ใส่หมายเลขโทรศัพท์ตัวเอง
 $tw = new phaiwan_tmn_gif();
 
 if (isset($_GET['phone']) || isset($_GET['link'])) {
