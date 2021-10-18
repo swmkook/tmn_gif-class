@@ -42,7 +42,7 @@ class phaiwan_tmn_gif {
   public function hashcode($code){
     return explode("?v=",$code)["1"];    
   }
-  public function line($msg){
+  public function line($msg,$token){
     $curl = curl_init();
     curl_setopt_array($curl, array(
       CURLOPT_URL => "https://notify-api.line.me/api/notify",
@@ -54,7 +54,7 @@ class phaiwan_tmn_gif {
       CURLOPT_CUSTOMREQUEST => "POST",
       CURLOPT_POSTFIELDS => "message=".$msg,
       CURLOPT_HTTPHEADER => array(
-      "Authorization: Bearer fsVGElInn1irCHQgxjvkjCH5rWXzguqs5tNIWGHRLRb",
+      "Authorization: Bearer ".$token,
       "Cache-Control: no-cache",
       "Content-Type: application/x-www-form-urlencoded"
       ),
