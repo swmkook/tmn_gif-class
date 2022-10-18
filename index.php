@@ -1,9 +1,10 @@
 <?php
 header('Content-Type: application/json');
 include "library/tmn_gif.class.php";
-error_reporting(0);
-ini_set('display_errors', 0);
-$phone = "0800000000";//ใส่หมายเลขโทรศัพท์ตัวเอง
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+$phone = "0000000000";//ใส่หมายเลขโทรศัพท์ตัวเอง
 $tw = new phaiwan_tmn_gif();
 
 if (isset($_GET['phone']) || isset($_GET['link'])) {
@@ -32,3 +33,4 @@ if (isset($_GET['phone']) || isset($_GET['link'])) {
     echo json_encode($data);
 
 }
+exit();
